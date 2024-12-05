@@ -17,13 +17,13 @@ This executable will end up in `/path/to/cedar-policy/cedar/target/debug/`.
 # validate the document_cloud policies
 cedar validate \
       --policies document_cloud/policies.cedar \
-      --schema document_cloud/document_cloud.cedarschema.json
+      --schema document_cloud/policies.cedarschema
 
 # perform an authorization request with the document_cloud policies
 cedar authorize \
       --policies document_cloud/policies.cedar \
       --entities document_cloud/entities.json \
-      --request-json document_cloud/allow_requests/alice_view_alice_public.json
+      --request-json document_cloud/allow/alice_view_alice_public.json
 ```
 
 Use the `run.sh` script to validate the policies and run every authorization test for both examples.
